@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1o37vob28fww"]
+
+[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="1_nrpv4"]
+[ext_resource type="Texture2D" uid="uid://cig0srkmlwh1q" path="res://Art/S.png" id="1_to202"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hy2e"]
+size = Vector2(8, 8)
+
+[sub_resource type="Animation" id="Animation_0gnu0"]
+resource_name = "ImInSomeOne"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 4)
+}
+
+[sub_resource type="Animation" id="Animation_pr64j"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_cj3nq"]
+resource_name = "Stoped"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8, 8), Vector2(4, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpppw"]
+_data = {
+"ImInSomeOne": SubResource("Animation_0gnu0"),
+"RESET": SubResource("Animation_pr64j"),
+"Stoped": SubResource("Animation_cj3nq")
+}
+
+[node name="Particle" type="Area2D"]
+script = ExtResource("1_nrpv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(8, 8)
+texture = ExtResource("1_to202")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0hy2e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wpppw")
+}

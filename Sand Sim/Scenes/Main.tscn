@@ -1,0 +1,659 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1phpkdp8wcmr"]
+
+[ext_resource type="PackedScene" uid="uid://b1o37vob28fww" path="res://Scenes/Particles/Particle.tscn" id="1_6l82e"]
+
+[node name="Main" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="FLOOR" type="Node2D" parent="."]
+
+[node name="Particle2" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(204, 612)
+CANMOVE = false
+
+[node name="Particle8" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(212, 612)
+CANMOVE = false
+
+[node name="Particle9" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(220, 612)
+CANMOVE = false
+
+[node name="Particle10" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(228, 612)
+CANMOVE = false
+
+[node name="Particle11" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(236, 612)
+CANMOVE = false
+
+[node name="Particle12" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(244, 612)
+CANMOVE = false
+
+[node name="Particle13" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(252, 612)
+CANMOVE = false
+
+[node name="Particle14" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(260, 612)
+CANMOVE = false
+
+[node name="Particle15" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(268, 612)
+CANMOVE = false
+
+[node name="Particle17" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(132, 612)
+CANMOVE = false
+
+[node name="Particle27" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 604)
+CANMOVE = false
+
+[node name="Particle119" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 612)
+CANMOVE = false
+
+[node name="Particle28" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 596)
+CANMOVE = false
+
+[node name="Particle29" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 588)
+CANMOVE = false
+
+[node name="Particle30" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 580)
+CANMOVE = false
+
+[node name="Particle31" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 572)
+CANMOVE = false
+
+[node name="Particle32" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 564)
+CANMOVE = false
+
+[node name="Particle33" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 556)
+CANMOVE = false
+
+[node name="Particle34" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 548)
+CANMOVE = false
+
+[node name="Particle120" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 540)
+CANMOVE = false
+
+[node name="Particle121" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 532)
+CANMOVE = false
+
+[node name="Particle122" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 524)
+CANMOVE = false
+
+[node name="Particle123" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 516)
+CANMOVE = false
+
+[node name="Particle124" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 508)
+CANMOVE = false
+
+[node name="Particle125" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 500)
+CANMOVE = false
+
+[node name="Particle126" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12, 492)
+CANMOVE = false
+
+[node name="Particle73" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 612)
+CANMOVE = false
+
+[node name="Particle74" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 604)
+CANMOVE = false
+
+[node name="Particle75" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 596)
+CANMOVE = false
+
+[node name="Particle76" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 588)
+CANMOVE = false
+
+[node name="Particle77" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 580)
+CANMOVE = false
+
+[node name="Particle78" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 572)
+CANMOVE = false
+
+[node name="Particle79" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 564)
+CANMOVE = false
+
+[node name="Particle80" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 556)
+CANMOVE = false
+
+[node name="Particle81" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(524, 548)
+CANMOVE = false
+
+[node name="Particle35" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 596)
+CANMOVE = false
+
+[node name="Particle36" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 588)
+CANMOVE = false
+
+[node name="Particle37" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 580)
+CANMOVE = false
+
+[node name="Particle38" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 572)
+CANMOVE = false
+
+[node name="Particle39" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 564)
+CANMOVE = false
+
+[node name="Particle40" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 556)
+CANMOVE = false
+
+[node name="Particle41" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 548)
+CANMOVE = false
+
+[node name="Particle42" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 540)
+CANMOVE = false
+
+[node name="Particle18" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(140, 612)
+CANMOVE = false
+
+[node name="Particle19" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(148, 612)
+CANMOVE = false
+
+[node name="Particle20" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(156, 612)
+CANMOVE = false
+
+[node name="Particle21" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(164, 612)
+CANMOVE = false
+
+[node name="Particle22" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(172, 612)
+CANMOVE = false
+
+[node name="Particle23" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(180, 612)
+CANMOVE = false
+
+[node name="Particle24" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(188, 612)
+CANMOVE = false
+
+[node name="Particle25" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(196, 612)
+CANMOVE = false
+
+[node name="Particle6" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(92, 612)
+CANMOVE = false
+
+[node name="Particle16" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(100, 612)
+CANMOVE = false
+
+[node name="Particle26" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(108, 612)
+CANMOVE = false
+
+[node name="Particle108" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(116, 612)
+CANMOVE = false
+
+[node name="Particle109" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(124, 612)
+CANMOVE = false
+
+[node name="Particle110" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(20, 612)
+CANMOVE = false
+
+[node name="Particle111" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(28, 612)
+CANMOVE = false
+
+[node name="Particle112" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(36, 612)
+CANMOVE = false
+
+[node name="Particle113" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(44, 612)
+CANMOVE = false
+
+[node name="Particle114" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(52, 612)
+CANMOVE = false
+
+[node name="Particle115" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(60, 612)
+CANMOVE = false
+
+[node name="Particle116" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(68, 612)
+CANMOVE = false
+
+[node name="Particle117" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(76, 612)
+CANMOVE = false
+
+[node name="Particle118" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(84, 612)
+CANMOVE = false
+
+[node name="Particle3" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(748, 604)
+CANMOVE = false
+
+[node name="Particle43" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(756, 604)
+CANMOVE = false
+
+[node name="Particle44" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(764, 604)
+CANMOVE = false
+
+[node name="Particle45" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(772, 604)
+CANMOVE = false
+
+[node name="Particle46" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(780, 604)
+CANMOVE = false
+
+[node name="Particle47" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(788, 604)
+CANMOVE = false
+
+[node name="Particle48" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(796, 604)
+CANMOVE = false
+
+[node name="Particle49" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(804, 604)
+CANMOVE = false
+
+[node name="Particle50" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(812, 604)
+CANMOVE = false
+
+[node name="Particle51" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(276, 612)
+CANMOVE = false
+
+[node name="Particle52" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(284, 612)
+CANMOVE = false
+
+[node name="Particle53" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(292, 612)
+CANMOVE = false
+
+[node name="Particle54" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 612)
+CANMOVE = false
+
+[node name="Particle5" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(372, 612)
+CANMOVE = false
+
+[node name="Particle82" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(380, 612)
+CANMOVE = false
+
+[node name="Particle83" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(388, 612)
+CANMOVE = false
+
+[node name="Particle84" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(396, 612)
+CANMOVE = false
+
+[node name="Particle85" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(404, 612)
+CANMOVE = false
+
+[node name="Particle86" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(412, 612)
+CANMOVE = false
+
+[node name="Particle87" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(420, 612)
+CANMOVE = false
+
+[node name="Particle88" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(428, 612)
+CANMOVE = false
+
+[node name="Particle89" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(436, 612)
+CANMOVE = false
+
+[node name="Particle90" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(308, 612)
+CANMOVE = false
+
+[node name="Particle91" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(316, 612)
+CANMOVE = false
+
+[node name="Particle92" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(324, 612)
+CANMOVE = false
+
+[node name="Particle93" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(332, 612)
+CANMOVE = false
+
+[node name="Particle94" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(340, 612)
+CANMOVE = false
+
+[node name="Particle95" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(348, 612)
+CANMOVE = false
+
+[node name="Particle96" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(356, 612)
+CANMOVE = false
+
+[node name="Particle97" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(364, 612)
+CANMOVE = false
+
+[node name="Particle98" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(444, 612)
+CANMOVE = false
+
+[node name="Particle99" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(452, 612)
+CANMOVE = false
+
+[node name="Particle100" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(460, 612)
+CANMOVE = false
+
+[node name="Particle101" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(468, 612)
+CANMOVE = false
+
+[node name="Particle102" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(476, 612)
+CANMOVE = false
+
+[node name="Particle103" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(484, 612)
+CANMOVE = false
+
+[node name="Particle104" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(492, 612)
+CANMOVE = false
+
+[node name="Particle105" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(500, 612)
+CANMOVE = false
+
+[node name="Particle106" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(508, 612)
+CANMOVE = false
+
+[node name="Particle107" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(516, 612)
+CANMOVE = false
+
+[node name="Particle55" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(724, 604)
+CANMOVE = false
+
+[node name="Particle56" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(732, 604)
+CANMOVE = false
+
+[node name="Particle57" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(740, 604)
+CANMOVE = false
+
+[node name="Particle4" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(876, 604)
+CANMOVE = false
+
+[node name="Particle58" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(884, 604)
+CANMOVE = false
+
+[node name="Particle59" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(892, 604)
+CANMOVE = false
+
+[node name="Particle60" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(900, 604)
+CANMOVE = false
+
+[node name="Particle61" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(908, 604)
+CANMOVE = false
+
+[node name="Particle62" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 604)
+CANMOVE = false
+
+[node name="Particle63" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(924, 604)
+CANMOVE = false
+
+[node name="Particle64" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(908, 604)
+CANMOVE = false
+
+[node name="Particle65" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(916, 604)
+CANMOVE = false
+
+[node name="Particle66" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(820, 604)
+CANMOVE = false
+
+[node name="Particle67" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(828, 604)
+CANMOVE = false
+
+[node name="Particle68" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(836, 604)
+CANMOVE = false
+
+[node name="Particle69" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(844, 604)
+CANMOVE = false
+
+[node name="Particle70" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(852, 604)
+CANMOVE = false
+
+[node name="Particle71" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(860, 604)
+CANMOVE = false
+
+[node name="Particle72" parent="FLOOR" instance=ExtResource("1_6l82e")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(868, 604)
+CANMOVE = false
+
+[node name="Particle28" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(804, 588)
+CANMOVE = false
+
+[node name="Particle29" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(828, 596)
+CANMOVE = false
+
+[node name="Particle31" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(804, 580)
+CANMOVE = false
+
+[node name="Particle32" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(804, 596)
+CANMOVE = false
+
+[node name="Particle37" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(836, 588)
+CANMOVE = false
+
+[node name="Particle40" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 500)
+
+[node name="Particle39" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(836, 596)
+CANMOVE = false
+
+[node name="Particle33" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(812, 596)
+CANMOVE = false
