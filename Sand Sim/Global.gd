@@ -17,26 +17,4 @@ func _process(delta):
 		get_tree().reload_current_scene()
 
 
-func _physics_process(delta):
-	RunFrame()
 
-	
-
-func RunFrame():
-	for p in particleList:
-		if p.CANMOVE:
-			if DEBUG_MODE:
-				if Input.is_action_just_pressed("e"):
-					p.CallListFromGlobal()
-			elif !p.iMoved:
-				p.CallListFromGlobal()
-
-func SortListForDups(_list = []):
-	for a in _list:
-		var dup = false
-		for b in _list:
-			if a == b:
-				dup = true
-				b.remove()
-				return
-		

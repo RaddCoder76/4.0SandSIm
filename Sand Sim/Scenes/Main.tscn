@@ -627,33 +627,5 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(868, 604)
 CANMOVE = false
 
-[node name="Particle28" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(804, 588)
-CANMOVE = false
-
-[node name="Particle29" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(828, 596)
-CANMOVE = false
-
-[node name="Particle31" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(804, 580)
-CANMOVE = false
-
-[node name="Particle32" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(804, 596)
-CANMOVE = false
-
-[node name="Particle37" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(836, 588)
-CANMOVE = false
-
 [node name="Particle40" parent="." instance=ExtResource("1_6l82e")]
 position = Vector2(796, 500)
-
-[node name="Particle39" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(836, 596)
-CANMOVE = false
-
-[node name="Particle33" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(812, 596)
-CANMOVE = false

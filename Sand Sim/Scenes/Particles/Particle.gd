@@ -32,25 +32,35 @@ func _ready():
 	_point.collide_with_areas = true
 	_point.collide_with_bodies = false
 
-#Do this f
+#Do this on exit
 func _exit_tree():
 	Global.particleList.erase(self)
 
 
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INPUT DIRECTION LIST AND TYPE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+var directionList = []
+@export  var particleType = "Sand"
 func _init():
+	directionList = [Vector2(position.x, position.y + Global.SIZE),
+	Vector2(position.x + Global.SIZE, position.y + Global.SIZE),
+	Vector2(position.x - Global.SIZE, position.y + Global.SIZE)] 
+	#print("X: " + str(global_position.x) + " : " + str(position.y) + str(Global.SIZE))
 	iMoved = true
 
 
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INPUT DIRECTION LIST AND TYPE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-var directionList = [Vector2(position.x, position.y + Global.SIZE), Vector2(position.x + Global.SIZE, position.y + Global.SIZE), Vector2(position.x - Global.SIZE, position.y + Global.SIZE)]
-@export  var particleType = "Sand"
+func _physics_process(delta):
+	if CANMOVE:
+		CallListFromGlobal()
+
+
 
 
 
 
 func CallListFromGlobal():
+	#print(directionList)
 	var tempPosition = FindNewPosition(directionList)
-	#print(tempPosition)
+	#print(str(directionList) + "\n\n\n : " + str(tempPosition))
 	if VerifyPosition(tempPosition):
 		Move(tempPosition)
 	else:
@@ -61,7 +71,7 @@ func CallListFromGlobal():
 func FindNewPosition(posToCheck = []):
 	for p in posToCheck:
 		var pos = CheckPos(p)[1]
-		print(pos)
+		#print(pos)
 		if !pos:
 			
 			Global.positionSpotHolder.append([self, p])
