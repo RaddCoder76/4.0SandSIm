@@ -39,16 +39,16 @@ func _physics_process(delta):
 
 func CallFrame():
 	DebugDisplay()
-	var posList = [Vector2(position.x, position.y + Global.SIZE), Vector2(position.x + Global.SIZE , position.y + Global.SIZE),
-	Vector2(position.x - Global.SIZE , position.y + Global.SIZE)]
-	var result = CheckPos(posList)
-	if result[0][0]:
+	var result = CheckDir(Vector2(0,1), 1)
+	if result[0]:
 		print(result)
-		Move(result[0][1])
+		Move(result[1])
+	else:
+		timeSinceLastMove+=1
 
 func Move(_pos = Vector2()):
 	timeSinceLastMove = 0
-	position = _pos
+	position += _pos
 
 
 
@@ -71,25 +71,26 @@ func VerifyPosition(_pos):
 
 #COMPLETE
 #takes in a list of vector2s and return a list that: [[true/false, position/whatIHit]]
-func CheckPos(_listOfPos = [Vector2()], _exclude = [self]):
-	var whatIHit = null
-	var returnList = []
-	for _pos in _listOfPos:
-		var _point = PhysicsPointQueryParameters2D.new()
-		_point.collide_with_areas = true
-		_point.collide_with_bodies = false
-		_point.exclude = _exclude
-		_point.set("position", _pos)
-		
-		
-		var result = get_world_2d().direct_space_state.intersect_point(_point, 32)
-		if result.size() > 0:
-			print([false, result[0].collider])
-			returnList.append([false, result[0].collider])
-		else:
-			returnList.append([true, _pos])
-	
-	return returnList
+func CheckDir(_dir = Vector2(0,1), _dis = 1 , _exclude = [self]):
+	var returnList
+	if _dis > 0:
+		for _num in _dis:
+			var _pos = (_dir.normalized() * (_num + 1))
+			var _point = PhysicsPointQueryParameters2D.new()
+			_point.collide_with_areas = true
+			_point.collide_with_bodies = false
+			_point.exclude = _exclude
+			_point.set("position", _pos)
+			
+			
+			var result = get_world_2d().direct_space_state.intersect_point(_point, 32)
+			if result.size() > 0 and _num == 0:
+				print([false, result[0].collider])
+				return [false, result[0].collider]
+			elif result.size() == 0:
+				returnList = [true, _pos]
+		print(returnList)
+		return returnList
 
 
 
@@ -98,7 +99,7 @@ func CheckPos(_listOfPos = [Vector2()], _exclude = [self]):
 
 
 func DebugDisplay():
-	var results = CheckPos(position)
+	var results = CheckDir(position, 0)
 	#print(results)
 	#if !results[0]:
 	#	modulate = Color.BLACK

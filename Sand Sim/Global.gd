@@ -18,7 +18,12 @@ func _process(delta):
 
 func _physics_process(delta):
 	#return
-	for p in particleList:
-		if p.CANMOVE:
-			p.CallFrame()
+	if !DEBUG_MODE:
+		for p in particleList:
+			if p.CANMOVE:
+				p.CallFrame()
+	elif DEBUG_MODE and Input.is_action_just_pressed("e"):
+		for p in particleList:
+			if p.CANMOVE:
+				p.CallFrame()
 
