@@ -641,12 +641,3 @@ position = Vector2(796, 476)
 
 [node name="Particle44" parent="." instance=ExtResource("1_6l82e")]
 position = Vector2(796, 468)
-
-[node name="Particle45" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(796, 460)
-
-[node name="Particle46" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(796, 452)
-
-[node name="Particle47" parent="." instance=ExtResource("1_6l82e")]
-position = Vector2(796, 444)

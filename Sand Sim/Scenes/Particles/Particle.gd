@@ -42,9 +42,9 @@ func CallFrame():
 	var posList = [Vector2(position.x, position.y + Global.SIZE), Vector2(position.x + Global.SIZE , position.y + Global.SIZE),
 	Vector2(position.x - Global.SIZE , position.y + Global.SIZE)]
 	var result = CheckPos(posList)
-	if result[0] == false:
+	if result[0][0]:
 		print(result)
-		Move(result[1])
+		Move(result[0][1])
 
 func Move(_pos = Vector2()):
 	timeSinceLastMove = 0
@@ -70,9 +70,10 @@ func VerifyPosition(_pos):
 
 
 #COMPLETE
-#return [[true, particleType] if hit, [false] if no hit
+#takes in a list of vector2s and return a list that: [[true/false, position/whatIHit]]
 func CheckPos(_listOfPos = [Vector2()], _exclude = [self]):
-	var lastThingIHit = null
+	var whatIHit = null
+	var returnList = []
 	for _pos in _listOfPos:
 		var _point = PhysicsPointQueryParameters2D.new()
 		_point.collide_with_areas = true
@@ -82,11 +83,13 @@ func CheckPos(_listOfPos = [Vector2()], _exclude = [self]):
 		
 		
 		var result = get_world_2d().direct_space_state.intersect_point(_point, 32)
-		if result.size() == 0: #did not detect them
-			return [false, _pos]
-		else:# Hit something
-			lastThingIHit = result[0].collider
-	return [true, lastThingIHit]
+		if result.size() > 0:
+			print([false, result[0].collider])
+			returnList.append([false, result[0].collider])
+		else:
+			returnList.append([true, _pos])
+	
+	return returnList
 
 
 
@@ -95,13 +98,14 @@ func CheckPos(_listOfPos = [Vector2()], _exclude = [self]):
 
 
 func DebugDisplay():
-	#print(CheckPos(position))
-	if CheckPos(position)[1]:
-		modulate = Color.BLACK
-	elif timeSinceLastMove >= Global.MOVEBUFFER:
-		modulate = Color.RED
-	elif !CheckPos(position)[1]:
-		modulate = Color.YELLOW
+	var results = CheckPos(position)
+	#print(results)
+	#if !results[0]:
+	#	modulate = Color.BLACK
+	#elif timeSinceLastMove >= Global.MOVEBUFFER:
+	#	modulate = Color.RED
+	#elif results[0]:
+	#	modulate = Color.YELLOW
 		#modulate.h = rnd.randi_range(0, 66)
 		#modulate.s = 100
 		#modulate.v = 100
