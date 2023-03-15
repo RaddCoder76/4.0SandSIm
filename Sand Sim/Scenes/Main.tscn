@@ -584,12 +584,12 @@ CANMOVE = false
 
 [node name="Particle64" parent="FLOOR" instance=ExtResource("1_6l82e")]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(908, 604)
+position = Vector2(916, 620)
 CANMOVE = false
 
 [node name="Particle65" parent="FLOOR" instance=ExtResource("1_6l82e")]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(916, 604)
+position = Vector2(924, 620)
 CANMOVE = false
 
 [node name="Particle66" parent="FLOOR" instance=ExtResource("1_6l82e")]
@@ -629,3 +629,24 @@ CANMOVE = false
 
 [node name="Particle40" parent="." instance=ExtResource("1_6l82e")]
 position = Vector2(796, 500)
+
+[node name="Particle41" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 492)
+
+[node name="Particle42" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 484)
+
+[node name="Particle43" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 476)
+
+[node name="Particle44" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 468)
+
+[node name="Particle45" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 460)
+
+[node name="Particle46" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 452)
+
+[node name="Particle47" parent="." instance=ExtResource("1_6l82e")]
+position = Vector2(796, 444)
