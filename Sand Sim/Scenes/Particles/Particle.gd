@@ -1,113 +1,126 @@
 extends Area2D
 
+var G
 
 #CONSTANT VARS 
 @export var CANMOVE = true
-
+@export var moveSpeed = 1
 
 var rnd = RandomNumberGenerator.new()
-@export var timeSinceLastMove = 0
-var hasMoved = true
-
-
 
 # position = Vector2(), exclude = [], collision_mask = 4294967295, collide_with_bodies/areas = false/true, 
 
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INPUT DIRECTION LIST AND TYPE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 @export  var particleType = "Sand"
-
+var didIMove = false
 ######################################################################################################################################################################################################
 
-#Set Start Propetys 
 func _ready():
-	#Set _point vars 
+	G = get_tree().current_scene.get_node(".")
+	#await get_tree().create_timer(.01).timeout
 	if CANMOVE:
-		Global.particleList.append(self)
+		add_to_group("P")
+		G.AddToActiveParticles(self)
+
+
+
+
+#@export var lifeTime : int = 20
+#var tick = 0
+func _process(delta):
+	DebugColor()
+
+func Update():
+	if CANMOVE:
+		didIMove = false
+		#G.AddToActiveParticles(self)
+		
+		var _positions = GetAvaiblePositionsInDirection(Vector2(0,1), 1) # [null/collider, pos]
+		
+		if _positions.size() > 0:
+			var finalPos = G.GetFinalPos(_positions)
+			
+			if finalPos != null:
+				Move(finalPos)
+				return
+		
+		#G.AddToActiveParticles(self)
+
 	
-
-#Do this on exit
-func _exit_tree():
-	Global.particleList.erase(self)
-
-
-
-func _physics_process(delta):
-	return
-	if CANMOVE:
-		CallFrame()
-
-func CallFrame():
-	DebugDisplay()
-	var result = CheckDir(Vector2(0,1), 1)
-	if result[0]:
-		print(result)
-		Move(result[1])
-	else:
-		timeSinceLastMove+=1
-
-func Move(_pos = Vector2()):
-	timeSinceLastMove = 0
-	position += _pos
-
-
-
-
-
-func VerifyPosition(_pos):
-	for spot in Global.positionSpotHolder:
-		if spot[1] == _pos and self != spot[0]:
-			return false
-	return true
-
-
-
-
-
-
-
+func Move(_pos : Vector2):
+	G.AddToSpotList(self, _pos)
+	CheckAround()
+	G.AddToActiveParticles(self)
+	didIMove = true
+	global_position = _pos
+	await get_tree().create_timer(.01).timeout
+	G.RemoveFromSpotList(self, _pos)
 
 
 
 #COMPLETE
-#takes in a list of vector2s and return a list that: [[true/false, position/whatIHit]]
-func CheckDir(_dir = Vector2(0,1), _dis = 1 , _exclude = [self]):
-	var returnList
-	if _dis > 0:
-		for _num in _dis:
-			var _pos = (_dir.normalized() * (_num + 1))
-			var _point = PhysicsPointQueryParameters2D.new()
-			_point.collide_with_areas = true
-			_point.collide_with_bodies = false
-			_point.exclude = _exclude
-			_point.set("position", _pos)
-			
-			
-			var result = get_world_2d().direct_space_state.intersect_point(_point, 32)
-			if result.size() > 0 and _num == 0:
-				print([false, result[0].collider])
-				return [false, result[0].collider]
-			elif result.size() == 0:
-				returnList = [true, _pos]
-		print(returnList)
-		return returnList
-
-
-
-
-
-
-
-func DebugDisplay():
-	var results = CheckDir(position, 0)
-	#print(results)
-	#if !results[0]:
-	#	modulate = Color.BLACK
-	#elif timeSinceLastMove >= Global.MOVEBUFFER:
-	#	modulate = Color.RED
-	#elif results[0]:
-	#	modulate = Color.YELLOW
-		#modulate.h = rnd.randi_range(0, 66)
-		#modulate.s = 100
-		#modulate.v = 100
+# return a [] that holds emptys Vectors positions in directions
+func GetAvaiblePositionsInDirection(_dir : Vector2, _strength : int) -> Array:
+	var _return = []
+	for _s in _strength:
+		var _pos = global_position + ((_dir * G.SIZE) * (_s + 1))
 		
+		var _result = CheckPos(_pos) # bool
+		if _result == true: #no hit
+			_return.append(_pos)
+		else:
+			return _return
+	#print("pos that work " + str(_return))
+	return _return
+	
+
+
+
+# COMPLETE	
+#return [null/collider, pos]
+func CheckPos(_position = Vector2(), _excludeList = [self], _limit = 1) -> bool:
+	var _point = PhysicsPointQueryParameters2D.new()
+	_point.exclude = _excludeList
+	_point.position = _position
+	
+	##_point.collision_mask = 0
+	
+	_point.collide_with_areas = true
+	
+	var _result = get_world_2d().direct_space_state.intersect_point(_point, _limit)
+
+	if _result.size() > 0:
+		return false
+	return true
+
+func GetPos(_pos):
+	var _point = PhysicsPointQueryParameters2D.new()
+	_point.exclude = [self]
+	_point.position = _pos
+	#_point.collision_mask = 0
+	_point.collide_with_areas = true
+	
+	var _result = get_world_2d().direct_space_state.intersect_point(_point, 1)
+	
+	if _result.size() > 0:
+		return _result[0].collider
+	return null
+	
+
+# COMPLETE
+func DebugColor():
+	if CheckPos(global_position):
+		modulate = Color.BLACK
+	elif !didIMove:
+		modulate = Color.RED
+	else:
+		modulate = Color.CORAL
+
+
+func CheckAround():
+	$ParticleDetector/CollisionShape2D.disabled = true
+	await  get_tree().create_timer(1).timeout
+	$ParticleDetector/CollisionShape2D.disabled = false
+	
+
