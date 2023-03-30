@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://4bpohj4n1kjd"]
+
+[ext_resource type="PackedScene" uid="uid://b1o37vob28fww" path="res://Scenes/Particles/Particle.tscn" id="1_xof1x"]
+[ext_resource type="Script" path="res://Scripts/Sand.gd" id="2_ovxl6"]
+
+[node name="Sand" instance=ExtResource("1_xof1x")]
+modulate = Color(1, 1, 0, 1)
+script = ExtResource("2_ovxl6")

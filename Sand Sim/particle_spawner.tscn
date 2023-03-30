@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6dr5re8bc5mw"]
+
+[ext_resource type="Script" path="res://ParticleSpawner.gd" id="1_8l3v0"]
+[ext_resource type="PackedScene" uid="uid://4bpohj4n1kjd" path="res://Scenes/Particles/sand.tscn" id="2_7rvwq"]
+
+[node name="ParticleSpawner" type="Node2D"]
+script = ExtResource("1_8l3v0")
+particle = ExtResource("2_7rvwq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

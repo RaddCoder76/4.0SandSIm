@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1o37vob28fww"]
+[gd_scene load_steps=8 format=3 uid="uid://b1o37vob28fww"]
 
 [ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="1_nrpv4"]
-[ext_resource type="Texture2D" uid="uid://cig0srkmlwh1q" path="res://Art/S.png" id="1_to202"]
+[ext_resource type="Texture2D" uid="uid://dbgwoph27skjt" path="res://Art/sadfasfasdf.png" id="2_dtto0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hy2e"]
 size = Vector2(8, 8)
@@ -57,29 +57,18 @@ _data = {
 "Stoped": SubResource("Animation_cj3nq")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s4akp"]
-radius = 6.08276
-
 [node name="Particle" type="Area2D"]
 script = ExtResource("1_nrpv4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(8, 8)
-texture = ExtResource("1_to202")
+texture = ExtResource("2_dtto0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0hy2e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_wpppw")
 }
-
-[node name="ParticleDetector" type="Area2D" parent="."]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParticleDetector"]
-shape = SubResource("CircleShape2D_s4akp")
-debug_color = Color(0.952941, 0, 0.552941, 0.419608)
-
-[connection signal="area_entered" from="ParticleDetector" to="." method="_on_particle_detector_area_entered"]

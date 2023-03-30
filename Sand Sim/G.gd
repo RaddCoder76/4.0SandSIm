@@ -3,7 +3,7 @@ extends Node
 var DEBUG_MODE = true
 @export var SIZE = 8
 var MOVEBUFFER = 10
-
+var DEBUGCOLOR = false
 var rnd = RandomNumberGenerator.new()
 # [particle, positiontheywant]
 var positionSpotHolder = []
@@ -16,7 +16,8 @@ func _process(delta):
 		DEBUG_MODE = !DEBUG_MODE
 	if Input.is_action_just_pressed("Restart"):
 		get_tree().reload_current_scene()
-		
+	if Input.is_action_just_pressed("t"):
+		DEBUGCOLOR = !DEBUGCOLOR
 
 func IsOnSpotList(_pos):
 	for _spot in GetSpotList():
@@ -42,6 +43,7 @@ func GetFinalPos(_list : Array):
 	return finalPos
 
 func _physics_process(delta):
+	#await  get_tree().create_timer(.01).timeout
 	if DEBUG_MODE:
 		if Input.is_action_just_pressed("e"):
 			activeParticles.shuffle()
@@ -57,14 +59,16 @@ func _physics_process(delta):
 		for _p in _list:
 			if _p != null:
 				#_p.CANMOVE = true
-				
+				#await  get_tree().create_timer(0.1)
 				_p.Update()
+	#await  get_tree().create_timer(.01).timeout
+	
 
 
 func AddToActiveParticles(_p):
 	if !IsOnActiveList(_p) and _p.CANMOVE:
 		#_p.tick = 0
-		#_p.isActive = true
+		_p.isActive = true
 		activeParticles.append(_p)
 
 func RemoveFromActiveParticles(_p):
@@ -82,3 +86,11 @@ func RemoveFromSpotList(_p, _pos):
 
 func GetSpotList():
 	return positionSpotHolder
+
+
+func _on_world_timer_timeout():
+	return
+	#Frame()
+
+func GetDebugColor() -> bool:
+	return DEBUGCOLOR
